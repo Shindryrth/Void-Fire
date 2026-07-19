@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "voidfire:block/void_lantern"
+    },
+    "hanging=true": {
+      "model": "voidfire:block/void_lantern_hanging"
+    }
+  }
+}

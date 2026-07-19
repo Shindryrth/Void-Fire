@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "min_format": ${pack_format},
+    "max_format": ${pack_format},
+    "description": {
+      "translate": "datapack.void_fire.enchantments.description",
+      "fallback": "Burn your enemies with Void Fire Aspect and Void Flame!"
+    }
+  }
+}

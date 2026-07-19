@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "voidfire:block/void_wall_torch",
+      "y": 0
+    },
+    "facing=north": {
+      "model": "voidfire:block/void_wall_torch",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "voidfire:block/void_wall_torch",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "voidfire:block/void_wall_torch",
+      "y": 180
+    }
+  }
+}

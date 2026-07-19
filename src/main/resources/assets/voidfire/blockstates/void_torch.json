@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "voidfire:block/void_torch"
+    }
+  }
+}

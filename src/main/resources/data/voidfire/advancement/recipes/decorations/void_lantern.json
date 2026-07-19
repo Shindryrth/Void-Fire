@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_void_torch": {
+      "conditions": {
+        "items": [
+          {
+            "items": "voidfire:void_torch"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "voidfire:void_lantern"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_void_torch"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "voidfire:void_lantern"
+    ]
+  }
+}
