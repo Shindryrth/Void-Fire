@@ -1,8 +1,11 @@
 package net.shindryrth.voidfire;
 
+import it.crystalnest.cobweb.api.pack.fixed.StaticDataPack;
 import it.crystalnest.prometheus.api.Fire;
 import it.crystalnest.prometheus.api.FireManager;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
@@ -34,12 +37,12 @@ public class VoidFire {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        FireRegistry.register();
+        new StaticDataPack(ResourceLocation.fromNamespaceAndPath(VoidFire.MOD_ID, "enchantments"), Pack.Position.TOP).register();
+
         NeoForge.EVENT_BUS.register(this);
 
-        FireRegistry.register();
-
         modEventBus.addListener(this::addCreative);
-
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
@@ -48,7 +51,6 @@ public class VoidFire {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             ResourceKey<CreativeModeTab> key = event.getTabKey();
             if (key == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
                 event.insertAfter(
@@ -74,7 +76,6 @@ public class VoidFire {
                 );
             }
         }
-    }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
