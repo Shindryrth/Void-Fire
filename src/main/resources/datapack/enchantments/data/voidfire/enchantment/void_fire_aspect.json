@@ -14,7 +14,7 @@
             "base": 4.0,
             "per_level_above_first": 4.0
           },
-          "fire_type": "void"
+          "fire_type": "voidfire:void"
         },
         "enchanted": "attacker",
         "requirements": {
