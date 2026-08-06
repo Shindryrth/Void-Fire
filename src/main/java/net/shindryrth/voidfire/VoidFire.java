@@ -39,7 +39,6 @@ public class VoidFire {
 
         FireRegistry.register();
         new StaticDataPack(ResourceLocation.fromNamespaceAndPath(VoidFire.MOD_ID, "enchantments"), Pack.Position.TOP).register();
-
         NeoForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
