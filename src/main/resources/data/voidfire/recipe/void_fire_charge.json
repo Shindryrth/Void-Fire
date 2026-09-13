@@ -9,16 +9,8 @@
       "item": "minecraft:blaze_powder"
     },
     {
-      "item": "minecraft:ender_eye"
-    },
-    [
-      {
-        "item": "minecraft:charcoal"
-      },
-      {
-        "item": "minecraft:coal"
-      }
-    ]
+      "item": "voidfire:void_infused_coal"
+    }
   ],
   "result": {
     "id": "voidfire:void_fire_charge",

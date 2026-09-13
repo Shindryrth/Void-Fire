@@ -8,9 +8,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.NeoForge;
 import net.shindryrth.voidfire.fire.FireRegistry;
+import net.shindryrth.voidfire.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -40,6 +42,8 @@ public class VoidFire {
         FireRegistry.register();
         new StaticDataPack(ResourceLocation.fromNamespaceAndPath(VoidFire.MOD_ID, "enchantments"), Pack.Position.TOP).register();
         NeoForge.EVENT_BUS.register(this);
+
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
     }
@@ -73,6 +77,7 @@ public class VoidFire {
                         FireManager.getRequiredComponent(VOID_FIRE_TYPE, Fire.Component.FIRE_CHARGE_ITEM).getDefaultInstance(),
                         CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
                 );
+                event.accept(ModItems.VOID_INFUSED_COAL);
             }
         }
 

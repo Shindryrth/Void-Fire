@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    [
+      {
+        "item": "minecraft:coal"
+      },
+      {
+        "item": "minecraft:charcoal"
+      }
+    ],
+    {
+      "item": "minecraft:ender_eye"
+    }
+  ],
+  "result": {
+    "id": "voidfire:void_infused_coal",
+    "count": 1
+  }
+}
