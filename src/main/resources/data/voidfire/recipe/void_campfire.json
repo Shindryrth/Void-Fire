@@ -1,18 +1,26 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "key": {
-    "#": "#minecraft:ender_eye",
-    "L": "#minecraft:logs",
-    "S": "minecraft:stick"
-  },
   "pattern": [
     " S ",
     "S#S",
     "LLL"
   ],
+  "key": {
+    "L": [
+      {
+        "tag": "minecraft:logs"
+      }
+    ],
+    "#": {
+      "item": "minecraft:ender_eye"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
   "result": {
-    "count": 1,
-    "id": "voidfire:void_campfire"
+    "id": "voidfire:void_campfire",
+    "count": 1
   }
 }
